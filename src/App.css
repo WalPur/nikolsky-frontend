@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "Amagro";
+  src: local("Amagro"), url(fonts/Amagro.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Alegreya";
+  src: local("Alegreya"), url(fonts/Alegreya.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Alegreya Sans SC";
+  src: local("AlegreyaSansSC"), url(fonts/AlegreyaSansSC.ttf) format("truetype");
+}

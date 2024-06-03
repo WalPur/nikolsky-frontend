@@ -5,7 +5,7 @@ function Welcome() {
   return (
     <div className="flex flex-col gap-11">
       <BlockName />
-      <TextSubheader text="Добро пожаловать в Никольский музей землепользования!" />
+      <TextSubheader toptext="Добро пожаловать в Никольский музей" subtext="землепользования!" />
     </div>
   );
 }
