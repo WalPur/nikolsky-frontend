@@ -12,3 +12,14 @@
   font-family: "Alegreya Sans SC";
   src: local("AlegreyaSansSC"), url(fonts/AlegreyaSansSC.ttf) format("truetype");
 }
+
+#progress {
+  background: url(/elements/progress-background.svg) repeat-x 50%;
+  background-size: auto 3px;
+  width: 13.75rem;
+  margin: 0 0.625rem;
+  height: 3px;
+  border: none;
+  color: #000;
+  appearance: none;
+}
