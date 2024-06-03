@@ -23,3 +23,32 @@
   color: #000;
   appearance: none;
 }
+
+element.style {
+}
+@media only screen and (min-width: 64em) {
+    .scroll-indicator-progress {
+        width: 13.75rem;
+    }
+}
+.scroll-indicator-progress {
+    width: 10rem;
+    margin: 0 .625rem;
+}
+.progress, .progress-white {
+    background: url(elements/progress-background.svg) repeat-x 50%;
+    /* background-size: auto 3px; */
+    height: 3px;
+    border: no;
+    /* appearance: none; */
+    -moz-appearance: none;
+    appearance: none;
+}
+progress {
+    appearance: auto;
+    box-sizing: border-box;
+    display: inline-block;
+    block-size: 1em;
+    inline-size: 10em;
+    vertical-align: -0.2em;
+}
