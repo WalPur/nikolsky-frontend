@@ -4,12 +4,19 @@ import ReactPaginate from "react-paginate";
 import ArrowLeft from "../elements/arrow_left";
 import ArrowRight from "../elements/arrow_right";
 
-function NewsList({ items }) {
+function NewsList({ items, selectedMonth, selectedYear }) {
   const [itemOffset, setItemOffset] = useState(0);
   const itemsPerPage = 10;
 
+  const filteredItems = items.filter((item) => {
+    const date = new Date(item.date_created);
+    return (
+      (selectedMonth == -1 || date.getMonth() === selectedMonth) &&
+      (selectedYear == -1 || date.getFullYear() === selectedYear)
+    );
+  });
   const endOffset = itemOffset + itemsPerPage;
-  const currentItems = items.slice(itemOffset, endOffset);
+  const currentItems = filteredItems.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(items.length / itemsPerPage);
 
   const handlePageClick = (event) => {

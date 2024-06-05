@@ -8,6 +8,8 @@ import React, { useState } from "react";
 function PageNews() {
   const [items, setPost] = React.useState([]);
   const [months, setMonths] = React.useState([]);
+  const [selectedMonth, setSelectedMonth] = React.useState(-1);
+  const [selectedYear, setSelectedYear] = React.useState(-1);
   const baseURL =
     "https://backend.xn----jtbfcagdcajpep7b9a1k.xn--p1ai/news/?format=json";
   React.useEffect(() => {
@@ -16,7 +18,7 @@ function PageNews() {
       setMonths(
         response.data.map((item) => {
           const date = new Date(item.date_created);
-          return date.getMonth();
+          return { month: date.getMonth(), year: date.getFullYear() };
         })
       );
     });
@@ -29,12 +31,20 @@ function PageNews() {
         {/* Левая колонка */}
         <div className="flex flex-col items-center w-full gap-6">
           <TextHeader toptext="Новости" />
-          <NewsList items={items} />
+          <NewsList
+            items={items}
+            selectedMonth={selectedMonth}
+            selectedYear={selectedYear}
+          />
         </div>
         {/* Правая колонка*/}
-        <div className="flex mt-[84px] w-96 h-48 p-4 justify-center bg-white rounded-3xl">
+        <div className="flex mt-[84px] w-96 h-min p-4 items-center bg-white rounded-3xl flex-col">
           <TextSubheader toptext="Архив новостей" />
-          <Archive months={months} />
+          <Archive
+            months={months}
+            selectMonth={setSelectedMonth}
+            selectYear={setSelectedYear}
+          />
         </div>
       </div>
     </div>
