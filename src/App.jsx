@@ -6,6 +6,8 @@ import PageNews from "./pages/news";
 import PageDetailNews from "./pages/detail";
 import PageModels from "./pages/models";
 import PageModel from "./pages/model";
+import PageAbout from "./pages/about";
+import PageContacts from "./pages/contacts";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +29,14 @@ const router = createBrowserRouter([
   {
     path: "/models/:name",
     element: <PageModel />,
+  },
+  {
+    path: "/about",
+    element: <PageAbout />,
+  },
+  {
+    path: "/contacts",
+    element: <PageContacts />,
   },
 ]);
 

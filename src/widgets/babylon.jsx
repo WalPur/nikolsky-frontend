@@ -119,7 +119,7 @@ const BabylonScene = ({ modelsName = "horse.glb" }) => {
     }
   }, []);
 
-  return <canvas ref={canvasRef} style={{ width: "100%", height: "100vh" }} />;
+  return <canvas ref={canvasRef} style={{ width: "100%", height: "100%" }} />;
 };
 
 export default BabylonScene;

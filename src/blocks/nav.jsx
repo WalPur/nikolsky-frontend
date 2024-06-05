@@ -5,13 +5,13 @@ function Navigation() {
     { text: "Главная", url: "/" },
     { text: "Новости", url: "/news" },
     { text: "События", url: "/" },
-    { text: "Экспонаты", url: "/" },
+    { text: "Экспонаты", url: "/models" },
     {
       text: "3D тур",
       url: "https://xn--p1add.xn----jtbfcagdcajpep7b9a1k.xn--p1ai/",
     },
-    { text: "О музее", url: "/" },
-    { text: "Посетить", url: "https://2gis.ru/yakutsk/firm/70000001039809779" },
+    { text: "О музее", url: "/about" },
+    { text: "Посетить", url: "/contacts" },
   ];
   let elements = links.map((link) => (
     <TextNav text={link.text} url={link.url} key={link.text} />
