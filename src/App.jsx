@@ -4,6 +4,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Header from "./widgets/header";
 import PageNews from "./pages/news";
 import PageDetailNews from "./pages/detail";
+import PageModels from "./pages/models";
+import PageModel from "./pages/model";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +19,14 @@ const router = createBrowserRouter([
   {
     path: "/news/:id",
     element: <PageDetailNews />,
+  },
+  {
+    path: "/models/",
+    element: <PageModels />,
+  },
+  {
+    path: "/models/:name",
+    element: <PageModel />,
   },
 ]);
 
